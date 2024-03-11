@@ -104,7 +104,7 @@ const UserProfileCard = () => {
                 Age:
               </label>
               <input
-                type="text"
+                type="number"
                 id="editedAge"
                 name="age"
                 value={editedUser.age || ""}

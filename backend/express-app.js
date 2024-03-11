@@ -8,6 +8,9 @@ module.exports.expressApp = (app) => {
 
   app.use(express.json());
 
+  app.use("/",(req,res)=>{
+    res.send('server running....')
+  })
 //   All api routes are defined here
   app.use("/api/user", userRoute);
 
