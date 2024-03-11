@@ -7,6 +7,9 @@ const app = express();
 // Making a database connection
 connectDatabse();
 
+app.use("/",(req,res)=>{
+  res.send('server running....')
+})
 expressApp(app);
 
 app.listen(PORT, () => {
