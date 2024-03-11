@@ -4,7 +4,12 @@ const { userRoute } = require("./routes");
 const { errorHandler } = require("./middlewares/errorHandler");
 
 module.exports.expressApp = (app) => {
-  app.use(cors());
+  var corsOptions = {
+    origin: ["https://skyearthlab-project-server.vercel.app/","http://localhost:3000"],
+    optionsSuccessStatus: 200 // For legacy browser support
+    }
+    
+  app.use(cors(corsOptions));
 
   app.use(express.json());
 
