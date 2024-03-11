@@ -52,6 +52,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    customers: [{
+      type: mongoose.ObjectId,
+      ref: 'Customer',
+    }]
   },
   { timestamps: true }
 );

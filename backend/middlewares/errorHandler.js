@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 module.exports.errorHandler = (err, req, res, next) => {
   //Handling validation
   if (err.name === "ValidationError") {
@@ -20,5 +21,5 @@ module.exports.errorHandler = (err, req, res, next) => {
     });
   }
 
-  res.json({ error: err.message });
+  res.json({ success:false, error: err.message });
 };
