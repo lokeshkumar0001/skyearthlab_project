@@ -86,7 +86,7 @@ userSchema.methods.generateJwt = async function () {
       username: this.username,
     },
     JWT_SECRET,
-    { expiresIn: "1h" }
+    { expiresIn: "2d" }
   );
 };
 

@@ -15,7 +15,7 @@ module.exports.createCustomer = async (req, res, next) => {
     return res.json({
       success: true,
       message: "Customer created!",
-      customer,
+      data: customer,
     });
   } catch (error) {
     next(error);
@@ -39,7 +39,7 @@ module.exports.updateCustomer = async (req, res, next) => {
     return res.json({
       success: true,
       message: "Customer updated!",
-      updatedCustomer,
+      data: updatedCustomer,
     });
   } catch (error) {
     next(error);
@@ -53,7 +53,7 @@ module.exports.getMyCustomer = async (req, res, next) => {
     return res.json({
       success: true,
       messagae: "Fetched All customers",
-      customers,
+      data: customers,
     });
   } catch (error) {
     next(error);
