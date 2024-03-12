@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export const useSignup = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { dispatch } = useAuthContext();
+  // const { dispatch } = useAuthContext();
   const navigate = useNavigate();
 
   const signup = async (username, email, password, firstname, lastname) => {
@@ -29,9 +29,8 @@ export const useSignup = () => {
         setError(data.error);
       } else if (data.success === true) {
         localStorage.setItem("user", JSON.stringify(data));
-        dispatch({type: 'LOGIN', payload: data})
         setIsLoading(false);
-        navigate('/dashboard');
+        navigate('/login');
       }
     } catch (error) {
       setIsLoading(false);
